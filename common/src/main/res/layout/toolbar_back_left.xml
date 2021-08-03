@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dimeno.commons.toolbar.container.ToolbarConstraintContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1890FF">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/toolbar_height"
+        android:layout_height="@dimen/toolbar_height"
+        android:scaleType="centerInside"
+        android:src="@mipmap/back"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:maxLines="1"
+        android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintEnd_toStartOf="@+id/rightTitle"
+        tools:text="我的" />
+
+    <TextView
+        android:id="@+id/rightTitle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:textColor="#FFFFFFFF"
+        android:visibility="gone"
+        android:layout_marginRight="20dp"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="提交问卷" />
+
+</com.dimeno.commons.toolbar.container.ToolbarConstraintContainer>

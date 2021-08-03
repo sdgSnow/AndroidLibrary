@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sdg.androidlibrary">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".db.DbActivity"></activity>
+        <activity android:name=".utils.UtilsActivity" />
+        <activity android:name=".update.UpdateActivity" />
+        <activity android:name=".thread.ThreadActivity" />
+        <activity android:name=".regex.RegexActivity" />
+        <activity android:name=".record.RecordActivity" />
+        <activity android:name=".permission.PermissionActivity" />
+        <activity android:name=".oss.OssActivity" />
+        <activity android:name=".exception.ExceptionActivity" />
+        <activity android:name=".download.DownloadActivity" />
+        <activity android:name=".dialog.DialogActivity" />
+        <activity android:name=".common.CommonActivity" />
+        <activity android:name=".baidumap.BaiduMapActivity" />
+        <activity android:name=".api.ApiActivity" />
+        <activity android:name=".adapter.AdapterActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 百度定位 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" /> <!-- 百度定位 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="SBjZS0eOMLuyE85zUFAb51sdEgCkRmSm" />
+    </application>
+
+</manifest>

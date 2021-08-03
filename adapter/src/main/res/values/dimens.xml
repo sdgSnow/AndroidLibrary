@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="base_dp">1dp</dimen>
+
+    <dimen name="item_padding">3dp</dimen>
+</resources>

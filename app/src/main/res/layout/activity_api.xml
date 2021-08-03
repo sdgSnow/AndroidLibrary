@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_back"
+    android:orientation="vertical"
+    tools:context=".api.ApiActivity">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="api 演示，GET-POST-PUT,添加日志监听，网络切换监听，数据加密"/>
+
+    <TextView
+        android:id="@+id/get"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="GET"/>
+
+    <TextView
+        android:id="@+id/post"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="POST"/>
+
+    <TextView
+        android:id="@+id/put"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="PUT"/>
+
+</LinearLayout>

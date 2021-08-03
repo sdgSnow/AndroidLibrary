@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.sdg.androidlibrary"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation project(path:':adapter')
+    implementation project(path:':common')
+    implementation project(path:':api')
+    implementation project(path:':permission')
+    implementation project(path:':record')
+    implementation project(path:':update')
+    implementation project(path:':dialog')
+    implementation project(path:':utils')
+    implementation project(path:':baidumap')
+    implementation project(path:':thread')
+    implementation project(path:':exception')
+    implementation project(path:':regex')
+    implementation project(path:':oss')
+    implementation project(path:':download')
+    implementation project(path:':objectbox')
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    debugImplementation "io.objectbox:objectbox-android-objectbrowser:$objectboxVersion"
+    releaseImplementation "io.objectbox:objectbox-android:$objectboxVersion"
+    implementation 'com.github.dimeno-tech:dimeno-network:0.2.0'
+}
+
+apply plugin: 'io.objectbox' // 应用Android插件后

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8 (5)" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/adapter" />
+            <option value="$PROJECT_DIR$/api" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/baidumap" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/dialog" />
+            <option value="$PROJECT_DIR$/download" />
+            <option value="$PROJECT_DIR$/exception" />
+            <option value="$PROJECT_DIR$/objectbox" />
+            <option value="$PROJECT_DIR$/oss" />
+            <option value="$PROJECT_DIR$/permission" />
+            <option value="$PROJECT_DIR$/record" />
+            <option value="$PROJECT_DIR$/regex" />
+            <option value="$PROJECT_DIR$/thread" />
+            <option value="$PROJECT_DIR$/update" />
+            <option value="$PROJECT_DIR$/utils" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

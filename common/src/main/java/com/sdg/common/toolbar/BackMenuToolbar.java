@@ -1,0 +1,89 @@
+package com.sdg.common.toolbar;
+
+import android.app.Activity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IdRes;
+
+import com.dimeno.commons.toolbar.impl.Toolbar;
+import com.sdg.common.R;
+
+
+public class BackMenuToolbar extends Toolbar {
+
+    private String mTitle;
+    private Activity activity;
+    private  TextView title;
+    private  ImageView menu;
+    public BackMenuToolbar(Activity activity, String title) {
+        super(activity);
+        this.activity = activity;
+        this.mTitle = title;
+    }
+
+
+    @Override
+    public int layoutRes() {
+        return R.layout.toolbar_back_menu;
+    }
+
+    @Override
+    public void onViewCreated( View view) {
+        title = view.findViewById(R.id.title);
+        menu = view.findViewById(R.id.menu);
+        ImageView back = view.findViewById(R.id.back);
+        title.setText(mTitle);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(myOnItemListener!=null){
+                    myOnItemListener.onClick(view);
+                }else {
+                    activity.finish();
+                }
+            }
+        });
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(myOnItemListener!=null){
+                    myOnItemListener.onClick(v);
+                }
+            }
+        });
+    }
+    public void setTitle(String mTitle) {
+        this.mTitle = mTitle;
+    }
+    public void setViewTitle(String mTitle) {
+        if(title!=null) {
+            title.setText(mTitle);
+        }
+    }
+    public void setMenu(@DrawableRes int ivMenu) {
+        if(menu!=null) {
+            menu.setImageResource(ivMenu);
+        }
+    }
+    public void setRightVisible(boolean visible){
+        if(menu!=null){
+            if(visible){
+                menu.setVisibility(View.VISIBLE);
+            }else {
+                menu.setVisibility(View.GONE);
+            }
+        }
+    }
+    public void setMyOnClickListener(MyOnClickListener myOnItemListener) {
+        this.myOnItemListener = myOnItemListener;
+    }
+
+    private MyOnClickListener myOnItemListener;
+
+    public interface MyOnClickListener {
+        void onClick(View view);
+    }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_back"
+    android:orientation="vertical"
+    tools:context=".dialog.DialogActivity">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="dialog 演示"/>
+
+    <TextView
+        android:id="@+id/normal"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="普通dialog"/>
+
+    <TextView
+        android:id="@+id/tip"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="提示dialog"/>
+
+    <TextView
+        android:id="@+id/progress"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="进度条dialog"/>
+
+    <TextView
+        android:id="@+id/loading"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="加载dialog"/>
+
+</LinearLayout>

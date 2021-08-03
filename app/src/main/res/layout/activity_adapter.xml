@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/base_back"
+    tools:context=".adapter.AdapterActivity">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adapter演示，包含增删改查，条目点击事件，长按事件，子控件点击事件，长按事件，侧滑删除，添加header，footer，空布局，伸展布局，多种条目类型，下拉刷新，上拉加载，搜索等功能"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcyDemo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_10"/>
+
+</LinearLayout>

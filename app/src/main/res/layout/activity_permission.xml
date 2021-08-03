@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_back"
+    android:orientation="vertical"
+    tools:context=".permission.PermissionActivity">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="permission 演示:权限请求，勾选不再提示和没勾选不在提示的拒绝，是否前往设置权限页面"/>
+
+    <TextView
+        android:id="@+id/onGrant"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="申请一个权限"/>
+
+    <TextView
+        android:id="@+id/onDeny"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="申请一组权限"/>
+
+    <TextView
+        android:id="@+id/onDeny2"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="只要拒绝就前往设置"/>
+
+    <TextView
+        android:id="@+id/onNotDeclared"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="勾选不再提示后前往设置页面"/>
+
+</LinearLayout>

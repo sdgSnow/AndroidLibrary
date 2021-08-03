@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="back">#000000</color>
+    <color name="gray_font_4">#777777</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue_00a2ea">#00A2EA</color>
+
+    <color name="base_line">#1A000000</color>
+    <!--基色-->
+    <color name="base_blue">#1890FF</color>
+    <!--页面背景色-->
+    <color name="base_back">#f2f2f2</color>
+    <!--主文本颜色-->
+    <color name="base_text_content">#384744</color>
+    <!--副文本颜色-->
+    <color name="base_text_desc">#888888</color>
+    <!--副文本颜色-->
+    <color name="base_text_color">#302C48</color>
+    <!--分割线-->
+
+    <!--  bottombar  -->
+    <color name="text_select">#ff6633</color>
+    <color name="text_no_select">#194aa7</color>
+    <color name="colorCircle">#ff3c0c</color>
+
+    <color name="back_survey">#FFF2F2F2</color>
+    <color name="color_8d8d8d">#8d8d8d</color>
+
+    <!--  问卷题目的颜色配置  -->
+    <color name="line">#F1F3F8</color>
+
+</resources>

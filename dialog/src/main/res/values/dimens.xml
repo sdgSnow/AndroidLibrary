@@ -1,0 +1,18 @@
+<resources>
+
+    <dimen name="sp_title">18sp</dimen>
+    <dimen name="sp_content">16sp</dimen>
+
+    <dimen name="sp_cancle">16sp</dimen>
+    <dimen name="sp_sure">16sp</dimen>
+
+    <!--  提示内容的上下间距  -->
+    <dimen name="content_space">5dp</dimen>
+    <!--  dialog的左右间距  -->
+    <dimen name="dialog_space">30dp</dimen>
+    <!--  确定和取消按钮的上下内间距  -->
+    <dimen name="click_padding_space">10dp</dimen>
+
+    <dimen name="base_dp">1dp</dimen>
+
+</resources>
