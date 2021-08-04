@@ -39,6 +39,8 @@ public class DialogLoading extends BaseDialog {
     protected void onInflated(View container, Bundle savedInstanceState) {
         loading = container.findViewById(R.id.loading);
         showAnimation();
+        setCancelable(false);
+        setCanceledOnTouchOutside(false);
     }
 
     /**
@@ -51,15 +53,4 @@ public class DialogLoading extends BaseDialog {
         loading.startAnimation(rotateAnimation);
     }
 
-    public void show(){
-        setCancelable(false);
-        setCanceledOnTouchOutside(false);
-        if(!isShowing()){
-            showDialog();
-        }
-    }
-
-    public void hideLoading(){
-        dismiss();
-    }
 }

@@ -21,11 +21,11 @@ public class DialogManage {
         } else {
             dialogLoading = new DialogLoading(context);
         }
-        dialogLoading.show();
+        dialogLoading.showDialog();
     }
 
     public void hideLoading(){
-        dialogLoading.hideLoading();
+        dialogLoading.dismiss();
     }
 
     public void showProgress(Context context) {
@@ -34,7 +34,7 @@ public class DialogManage {
         } else {
             dialogProgress = new DialogProgress(context);
         }
-        dialogProgress.show();
+        dialogProgress.showDialog();
     }
 
     public void hideProgress(){

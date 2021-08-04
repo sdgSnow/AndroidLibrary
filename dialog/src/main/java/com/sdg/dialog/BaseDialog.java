@@ -12,14 +12,15 @@ import android.view.WindowManager;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.sdg.dialog.R;
-
 public abstract class BaseDialog extends Dialog {
 
     private final View mContentView;
+    private Context mContext;
+    private boolean isTouchOrClickDismiss = true;
 
     public BaseDialog(@NonNull Context context) {
         super(context, R.style.BaseDialog);
+        this.mContext = context;
         mContentView = LayoutInflater.from(context).inflate(getLayout(), null);
     }
 
@@ -75,27 +76,25 @@ public abstract class BaseDialog extends Dialog {
     protected abstract void onInflated(View container, Bundle savedInstanceState);
 
     /**
-     * 显示dialog之前先判断当前activity是否存在
+     * @param touchOrClickDismiss 点击空白区域和返回键是否消失（结合在一起），默认为 true，代表点击可消失
+     *
      * */
-    public void showDialog(){
-        if(getContext() instanceof AppCompatActivity){
-            if(!((AppCompatActivity) getContext()).isFinishing()){
-                show();
-            }
-        }
-    }
-
-    public int dip2px(float dpValue) {
-        final float scale = getContext().getApplicationContext().getResources().getDisplayMetrics().density;
-        return (int) (dpValue * scale + 0.5f);
+    public BaseDialog setTouchOrClickDismiss(boolean touchOrClickDismiss){
+        this.isTouchOrClickDismiss = touchOrClickDismiss;
+        return this;
     }
 
     /**
-     * 根据手机的分辨率从 px(像素) 的单位 转成为 dp
-     */
-    public int px2dip(float pxValue) {
-        final float scale = getContext().getResources().getDisplayMetrics().density;
-        return (int) (pxValue / scale + 0.5f);
+     * 显示dialog之前先判断当前activity是否存在
+     * */
+    public void showDialog(){
+        setCancelable(isTouchOrClickDismiss);
+        setCanceledOnTouchOutside(isTouchOrClickDismiss);
+        if(mContext instanceof AppCompatActivity){
+            if(!((AppCompatActivity) mContext).isFinishing() && !isShowing()){
+                show();
+            }
+        }
     }
 
     public int px2dp(int px){

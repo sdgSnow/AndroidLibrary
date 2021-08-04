@@ -71,18 +71,6 @@ public class DialogTip extends BaseDialog{
         return this;
     }
 
-    //点击返回键和触摸dialog之外区域是否消失
-    public DialogTip setCancelableDismiss(boolean isCancelableDismiss) {
-        this.mCancelableDismiss = isCancelableDismiss;
-        return this;
-    }
-
-    public void show(){
-        setCancelable(mCancelableDismiss);
-        setCanceledOnTouchOutside(mCancelableDismiss);
-        showDialog();
-    }
-
     public interface CallBack {
         void confirm();
     }

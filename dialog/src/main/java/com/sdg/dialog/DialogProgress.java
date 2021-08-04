@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 
 public class DialogProgress extends BaseDialog{
 
-    private UploadCircleProgressBar progressBar;
+    private ProgressBar progressBar;
 
     private int mProgress = 0;
 
@@ -45,15 +45,6 @@ public class DialogProgress extends BaseDialog{
             if(callBack != null) {
                 callBack.success();
             }
-        }
-    }
-
-    public void show(){
-        mProgress = 0;
-        setCancelable(false);
-        setCanceledOnTouchOutside(false);
-        if(!isShowing()){
-            showDialog();
         }
     }
 

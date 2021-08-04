@@ -13,7 +13,7 @@ import android.view.View;
 /**
  * 上传环形进度条
  */
-public class UploadCircleProgressBar extends View {
+public class ProgressBar extends View {
 
     private static final String TAG = "UploadCircleProgressBar";
 
@@ -38,7 +38,7 @@ public class UploadCircleProgressBar extends View {
 
     private String mTxtHint2;
 
-    public UploadCircleProgressBar(Context context, AttributeSet attrs) {
+    public ProgressBar(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         mContext = context;

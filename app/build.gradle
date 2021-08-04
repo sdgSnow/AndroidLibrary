@@ -58,6 +58,7 @@ dependencies {
     debugImplementation "io.objectbox:objectbox-android-objectbrowser:$objectboxVersion"
     releaseImplementation "io.objectbox:objectbox-android:$objectboxVersion"
     implementation 'com.github.dimeno-tech:dimeno-network:0.2.0'
+
 }
 
 apply plugin: 'io.objectbox' // 应用Android插件后
