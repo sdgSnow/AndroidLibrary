@@ -18,7 +18,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/bojectbox"
+            android:id="@+id/objectbox"
             style="@style/style_tv"
             android:layout_marginTop="@dimen/dp_10"
             android:text="bojectbox"/>
@@ -62,5 +62,11 @@
         style="@style/style_tv"
         android:layout_marginTop="@dimen/dp_10"
         android:text="查询"/>
+
+    <TextView
+        android:id="@+id/limit_query"
+        style="@style/style_tv"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="分页查询"/>
 
 </LinearLayout>

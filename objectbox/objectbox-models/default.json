@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:6915110556507359688",
-      "lastPropertyId": "5:1985149363020913079",
+      "lastPropertyId": "6:7920553316301931633",
       "name": "Test",
       "properties": [
         {
@@ -33,6 +33,12 @@
           "id": "5:1985149363020913079",
           "name": "updateTime",
           "type": 9
+        },
+        {
+          "id": "6:7920553316301931633",
+          "name": "age",
+          "type": 5,
+          "flags": 4
         }
       ],
       "relations": []

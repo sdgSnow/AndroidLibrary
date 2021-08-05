@@ -86,6 +86,7 @@ public abstract class BaseDialog extends Dialog {
 
     /**
      * 显示dialog之前先判断当前activity是否存在
+     * 且dialog未显示的情况下才可show
      * */
     public void showDialog(){
         setCancelable(isTouchOrClickDismiss);

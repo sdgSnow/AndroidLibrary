@@ -1,0 +1,3 @@
+查看数据库方式
+先cmd:adb forward tcp:8090 tcp:8090
+然后浏览器打开：http://localhost:8090/index.html

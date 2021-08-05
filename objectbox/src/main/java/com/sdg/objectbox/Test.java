@@ -1,4 +1,4 @@
-package com.sdg.androidlibrary.db;
+package com.sdg.objectbox;
 
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
@@ -9,6 +9,7 @@ public class Test {
     public Long id;
     public String name;
     public String desc;
+    public int age;
     public String createTime;
     public String updateTime;
 }

@@ -55,10 +55,8 @@ dependencies {
 
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.android.support:multidex:1.0.3'
-    debugImplementation "io.objectbox:objectbox-android-objectbrowser:$objectboxVersion"
-    releaseImplementation "io.objectbox:objectbox-android:$objectboxVersion"
     implementation 'com.github.dimeno-tech:dimeno-network:0.2.0'
+    //腾讯Bugly异常上报
+    implementation 'com.tencent.bugly:crashreport:latest.release'
 
 }
-
-apply plugin: 'io.objectbox' // 应用Android插件后

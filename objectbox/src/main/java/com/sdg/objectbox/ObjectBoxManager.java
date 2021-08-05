@@ -1,4 +1,4 @@
-package com.sdg.androidlibrary.db;
+package com.sdg.objectbox;
 
 import android.content.Context;
 import io.objectbox.BoxStore;
