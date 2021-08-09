@@ -108,7 +108,6 @@ public class DbActivity extends BaseActivity implements View.OnClickListener {
                 testBox.put(test);
                 break;
             case R.id.query:
-                // todo 查询两百万条数据崩溃处理
                 KLog.i("开始查询:" + getFormatMMSS(System.currentTimeMillis()));
                 List<Test> querylist = testBox.query().build().find();
                 ToastUtils.showShort("查询共" + querylist.size() + "条数据");

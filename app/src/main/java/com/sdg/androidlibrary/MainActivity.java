@@ -103,7 +103,7 @@ public class MainActivity extends BaseActivity {
         list.add(new LibraryBean("regex","正则表达式",0));
         list.add(new LibraryBean("oss","oss上传",2));
         list.add(new LibraryBean("download","文件下载",0));
-        list.add(new LibraryBean("db","数据库使用",0));
+        list.add(new LibraryBean("objectbox","数据库使用",0));
     }
 
     private void initRcy() {
