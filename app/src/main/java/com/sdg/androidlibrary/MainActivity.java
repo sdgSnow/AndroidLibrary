@@ -70,6 +70,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        ToastUtils.showShort("Android库1");
         initRcyData();
         initRcy();
         refresh.setOnRefreshListener(new OnRefreshListener() {

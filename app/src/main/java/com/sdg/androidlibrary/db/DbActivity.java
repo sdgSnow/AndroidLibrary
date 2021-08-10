@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.objectbox.Box;
+import io.objectbox.android.AndroidObjectBrowser;
 
 public class DbActivity extends BaseActivity implements View.OnClickListener {
 
@@ -48,6 +49,8 @@ public class DbActivity extends BaseActivity implements View.OnClickListener {
         update.setOnClickListener(this::onClick);
         query.setOnClickListener(this::onClick);
         limit_query.setOnClickListener(this::onClick);
+
+        initOB();
     }
 
     @Override
@@ -63,6 +66,12 @@ public class DbActivity extends BaseActivity implements View.OnClickListener {
             test.updateTime = "updateTime" + i;
             list.add(test);
         }
+    }
+
+    public void initOB(){
+        ObjectBoxManager.init(this);
+        boolean start = new AndroidObjectBrowser(ObjectBoxManager.mBoxStore).start(this);
+        KLog.i("开启浏览器查询：" + start);
     }
 
     @Override

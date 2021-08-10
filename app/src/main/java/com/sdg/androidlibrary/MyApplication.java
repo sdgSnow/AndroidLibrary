@@ -25,13 +25,5 @@ public class MyApplication extends BaseApplication {
         LocationManager.init(this);
         RetrofitManager.get().setContext(this).setUrl(HttpUrl.getUrl());
         Network.init(this,new NetConfig.Builder().baseUrl("http://wm.dimenosys.com/").build());
-        initOB();
     }
-
-    public void initOB(){
-        ObjectBoxManager.init(this);
-        boolean start = new AndroidObjectBrowser(ObjectBoxManager.mBoxStore).start(this);
-        KLog.i("开启浏览器查询：" + start);
-    }
-
 }
